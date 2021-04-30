@@ -13,8 +13,8 @@ var twilio = require('twilio');
 const VoiceResponse = twilio.twiml.VoiceResponse;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
-
+  // res.send('Hello World!');
+  res.send('<h1>Hello World!</h1>')
   
   // client.messages.create({
   //   body: 'Hello from Node',
@@ -56,7 +56,7 @@ app.post('/find-consulatnt', (req, res) => {
   const voiceResponse = new VoiceResponse();
   voiceResponse.dial(phoneNumber, 
     {
-      timeLimit : 10
+      timeLimit : 60 // This is in seconds
     });
 
   res.send(voiceResponse.toString()) 

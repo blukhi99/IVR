@@ -54,7 +54,10 @@ app.post('/find-consulatnt', (req, res) => {
   console.log("ConsultantId", consultantId)
 
   const voiceResponse = new VoiceResponse();
-  voiceResponse.dial(phoneNumber);
+  voiceResponse.dial(phoneNumber, 
+    {
+      timeLimit : 10
+    });
 
   res.send(voiceResponse.toString()) 
 });

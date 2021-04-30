@@ -9,7 +9,7 @@ var accountSid = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // Your Account SID from ww
 var authToken = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy';   // Your Auth Token from www.twilio.com/console
 
 var twilio = require('twilio');
-var client = new twilio(accountSid, authToken);
+// var client = new twilio(accountSid, authToken);
 const VoiceResponse = twilio.twiml.VoiceResponse;
 
 app.get('/', (req, res) => {
